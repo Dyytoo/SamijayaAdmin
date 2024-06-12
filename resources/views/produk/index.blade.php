@@ -10,7 +10,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
         integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<<<<<<< HEAD
     
+=======
+>>>>>>> 311d0e2ceede5761a43467f615721cb925332c9e
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
 
@@ -109,6 +112,7 @@
 
 
 
+<<<<<<< HEAD
             <main class="content px-3 py-3">
                 <div class="container-fluid">
                     <div class="row mb-0 justify-content-start">
@@ -124,10 +128,23 @@
                                 </div>
                             </div>
 
+=======
+            <main class="content px-3 py-4">
+                <div class="container-fluid">
+                    <div class="row mb-0 justify-content-start">
+                        <div class="col-lg-3 col-xl-2">
+                            <div class="d-grid gap-2">
+                                <a href="{{ route('produks.create') }}" class="btn text-light" id="btn-tambah-produk"
+                                    title="Tambah Produk">
+                                    <i class="bi bi-plus"></i><i class="bi bi-box-seam"></i>
+                                </a>
+                            </div>
+>>>>>>> 311d0e2ceede5761a43467f615721cb925332c9e
                         </div>
                     </div>
                     <hr>
 
+<<<<<<< HEAD
 
                     <div class="table-responsive border p-3 rounded-3">
                         <div class=" d-flex search-box justify-content-between my-3" style="vertical-align: middle">
@@ -139,6 +156,12 @@
                                     <option value="50">50</option>
                                 </select>
                                 <p class="mt-2">entries per page</p>
+=======
+                    <div class="table-responsive border p-3 rounded-3">
+                        <div class="search-box justify-content-between" style="vertical-align: middle">
+                            <div class="pagination">
+
+>>>>>>> 311d0e2ceede5761a43467f615721cb925332c9e
                             </div>
                             <div class="d-flex">
                                 <p class="me-2">Search :</p><input type="search" id="search-input" placeholder=""
@@ -196,6 +219,7 @@
                             </tbody>
                         </table>
                     </div>
+<<<<<<< HEAD
                     <div class="pagination justify-content-between px-4">
                         <span id="pagination-info"></span>
                         <div>
@@ -204,6 +228,18 @@
                                     <button id="page-numbers" style="border: none;"></button>
                                     <button id="next-page" onclick="nextPage()" style="border: none">>></button>
                         </div>
+=======
+                    <div class="pagination">
+                        <select id="rows-per-page" onchange="updatePagination()">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                        </select>
+                        <span id="pagination-info"></span>
+                        <button id="prev-page" onclick="prevPage()">Previous</button>
+                        <button id="next-page" onclick="nextPage()">Next</button>
+>>>>>>> 311d0e2ceede5761a43467f615721cb925332c9e
                     </div>
                 </div>
             </main>
@@ -214,6 +250,7 @@
 
 
     @vite('resources/js/app.js')
+<<<<<<< HEAD
 
     
 
@@ -251,12 +288,17 @@
             XLSX.writeFile(wb, 'export.xlsx');
         });
     </script>
+=======
+>>>>>>> 311d0e2ceede5761a43467f615721cb925332c9e
     <script>
         let currentPage = 1;
         let rowsPerPage = 5;
         let totalRows = document.getElementById('table-body').rows.length;
+<<<<<<< HEAD
         let totalPages = Math.ceil(totalRows / rowsPerPage);
 
+=======
+>>>>>>> 311d0e2ceede5761a43467f615721cb925332c9e
 
         function updatePagination() {
             rowsPerPage = parseInt(document.getElementById('rows-per-page').value);
@@ -264,6 +306,7 @@
             updateTable();
         }
 
+<<<<<<< HEAD
         function updatePageNumbers() {
             let pageNumbersHTML = '';
             for (let i = 1; i <= totalPages; i++) {
@@ -272,6 +315,8 @@
             document.getElementById('page-numbers').innerHTML = pageNumbersHTML;
         }
 
+=======
+>>>>>>> 311d0e2ceede5761a43467f615721cb925332c9e
         function prevPage() {
             if (currentPage > 1) {
                 currentPage--;
@@ -286,11 +331,14 @@
             }
         }
 
+<<<<<<< HEAD
         function gotoPage(pageNumber) {
             currentPage = pageNumber;
             updateTable();
         }
 
+=======
+>>>>>>> 311d0e2ceede5761a43467f615721cb925332c9e
         function updateTable() {
             let startRow = (currentPage - 1) * rowsPerPage;
             let endRow = startRow + rowsPerPage;
@@ -305,11 +353,17 @@
             }
 
             document.getElementById('pagination-info').innerHTML =
+<<<<<<< HEAD
                 `Showing ${startRow + 1} to ${endRow} of ${totalRows} entries`;
         }
 
         updatePageNumbers();
 
+=======
+                `Showing ${startRow + 1} to ${endRow} of ${totalRows} rows`;
+        }
+
+>>>>>>> 311d0e2ceede5761a43467f615721cb925332c9e
         updateTable();
     </script>
     <script>
@@ -355,10 +409,15 @@
                 })
                 .then((willDelete) => {
                     if (willDelete) {
+<<<<<<< HEAD
                         // Get the form element
                         const form = ev.target.closest('form');
                         // Submit the form
                         form.submit();
+=======
+                        // Submit the form if the user confirms
+                        ev.target.form.submit();
+>>>>>>> 311d0e2ceede5761a43467f615721cb925332c9e
                     }
                 });
         }
