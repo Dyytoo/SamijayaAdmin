@@ -66,12 +66,12 @@
                         </li>
                     </ul>
                 </li> --}}
-                <li class="sidebar-item my-1" style="border-radius: 50px 0 0 50px;">
+                {{-- <li class="sidebar-item my-1" style="border-radius: 50px 0 0 50px;">
                     <a href="#" class="sidebar-link py-3" style="text-decoration:none">
                         <i class="bi bi-person-circle" title="Profil"></i>
                         <span>Profil</span>
                     </a>
-                </li>
+                </li> --}}
 
             </ul>
             <div class="sidebar-footer mb-3">
