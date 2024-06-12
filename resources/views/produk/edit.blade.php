@@ -31,12 +31,7 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="sidebar-item my-1" style="border-radius: 50px 0 0 50px;">
-                    <a href="#" class="sidebar-link py-3" style="text-decoration:none">
-                        <i class="bi bi-graph-up" title="Analitik"></i>
-                        <span>Analitik</span>
-                    </a>
-                </li>
+                
                 <li class="sidebar-item my-1 active" style="border-radius: 50px 0 0 50px;">
                     <a href="#" class="sidebar-link collapsed has-dropdown py-3" style="text-decoration:none"
                         data-bs-toggle="collapse" data-bs-target="#barang-menu" aria-expanded="false"
