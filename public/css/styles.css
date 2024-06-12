@@ -217,4 +217,21 @@ a.sidebar-link:hover {
     background-color: #09417c;
 }
 
+#page-numbers button {
+    border: none;
+    background-color: transparent;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#page-numbers button:hover {
+    background-color: #f0f0f0;
+}
+
+#page-numbers button.active {
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
 @media (min-width: 768px) {}
